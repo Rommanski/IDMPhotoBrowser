@@ -151,7 +151,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
     if ((self = [super init])) {
         // Defaults
         self.hidesBottomBarWhenPushed = YES;
-		
+
         _currentPageIndex = 0;
 		_performingLayout = NO; // Reset on view did appear
 		_rotating = NO;
@@ -175,7 +175,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
         _forceHideStatusBar = NO;
         _usePopAnimation = NO;
 		_disableVerticalSwipe = NO;
-		
+
 		_dismissOnTouch = NO;
 
         _useWhiteBackgroundColor = NO;
@@ -193,7 +193,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 		if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
             self.automaticallyAdjustsScrollViewInsets = NO;
 		}
-		
+
         _applicationWindow = [[[UIApplication sharedApplication] delegate] window];
 		self.modalPresentationStyle = UIModalPresentationCustom;
 		self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
@@ -206,7 +206,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
                                                      name:IDMPhoto_LOADING_DID_END_NOTIFICATION
                                                    object:nil];
     }
-	
+
     return self;
 }
 
@@ -1107,7 +1107,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 
     // if ([self isLandscape:orientation]) screenWidth = screenBound.size.height;
 
-    return CGRectMake(screenWidth - 75, 30, 55, 26);
+    return CGRectMake(screenWidth - 55, 30, 55, 26);
 }
 
 - (CGRect)frameForCaptionView:(IDMCaptionView *)captionView atIndex:(NSUInteger)index {
@@ -1219,7 +1219,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 	if (!permanent) {
 		[self hideControlsAfterDelay];
 	}
-	
+
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
